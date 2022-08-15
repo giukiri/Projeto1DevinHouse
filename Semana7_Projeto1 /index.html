@@ -58,20 +58,14 @@
 
           <div class="options">
             
-            <h3>Compartilhe seu conhecimento criando um card</h3>
+            <h3>Compartilhe seu conhecimento criando um card com DevDicas</h3>
                 &nbsp;
                 &nbsp;
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <h3>Veja nossas DevDicas clicando nos cards abaixo </h3>
+                
+                <h3>Veja nossas DevDicas abaixo </h3>
     
             </div>
            
@@ -99,7 +93,7 @@
 
             <h2 >Cadastrados</h2>
             <p>Cards enviados</p>
-            <span>50 </span>
+            <span id="cards_total"></span>
            
             
         </div>
@@ -109,7 +103,7 @@
             <p>Dicas de Front-End </p>
            <img src="./front-end.png" alt="imagem Front-End" class="imgFrontEnd">
             
-            <span>30</span>
+            <span id="cards_Front"></span>
         </div>
 
         <div class="card_categoria2">
@@ -117,7 +111,7 @@
             <p>Dicas de BackEnd</p>
             <img src="./backend.png" alt="imagem BackEnd" class="imgBackEnd">
          
-            <span>10</span>
+            <span id="cards_Back"></span>
         </div>
 
         <div class="card_categoria3">
@@ -125,7 +119,7 @@
             <p>Dicas de FullStack</p>
             <img src="./full-stack-developer-icon.webp" alt="imagem FullStack" class="imgFullstack">
            
-            <span>10</span>
+            <span id="cards_Full"></span>
         </div>
 
         <div class="card_categoria4">
@@ -133,7 +127,7 @@
             <p>Dicas de Comportamental / Soft</p>
             <img src="./logo-creative-soft-skills.png" alt="imagem soft skill" class="imgSoftSkills">
            
-            <span>10</span>
+            <span id="cards_Skills"></span>
         </div>
 
     </main>
@@ -145,10 +139,13 @@
 
             <input name="identificador" type="hidden" />
 
-            <div class="input" id="input1">
-            <label>Titulo </label>
+         <div class="input" id="input1">
+            <label class="tituloForm">Titulo </label>
+
+            <br/>
         
         <input   required id="input_form1" class="input_form" data-ls-module="charCounter" maxlength="64" type="text" placeholder="Adicione um titulo" >
+        <br/> 
         <span class="input_erro"></span>
 
         <div class="caracteres">
@@ -166,6 +163,7 @@
             <div class="input" id="input2" >
 
             <label>Linguagem/Skill </label>
+            <br/>
                 <input  data-ls-module="charCounter" maxlength="16" class="input_form"  id="input_form2"  type="text" placeholder="Sobre qual linguagem você irá escrever?" required >
                
                 <span class="input_erro"></span>
@@ -181,9 +179,11 @@
 
             <br/>
 
-            <div class="input" >
+            <div class="input_Box" >
 
             <label> Qual categoria sua dica se encaixa?</label>
+
+            <br/>
 
                <select required  id="input_form_Categoria">
 
@@ -206,21 +206,23 @@
             <div class="input" id="input3">
 
         <label>Descrição do tutorial </label>
+        <br/>
            <textarea  required data-ls-module="charCounter" maxlength="512" class="input_form"  id="input_form3"  rows="10" cols="40"></textarea>
            <span class="input_erro"></span>
 
-         <div class="caracteresDescricao">
+             <div class="caracteresDescricao">
                     <span class="min3">32</span>
                     <span class="max3">/512</span>
                     <p id="texto3"></p>
-                </div>
+            </div>
        
         </div>
 
-        <br/>
+                <br/>
 
         <div class="input" >
         <label>Deixe uma sugestão de vídeo caso você conheça algum </label>
+                <br/>    
             <input class="input_form"  id="input_form_url"  type="url" placeholder="Cole a url do vídeo aqui">
             <span class="input_erro"></span>
         </div>
@@ -228,29 +230,18 @@
 
         <br/>
 
-        <button type="reset" form="form" onclick="limpaFormulario()">Descartar</button>
         <button  id="btn_submit" type="submit" onclick="salvarFormulario();limpaFormulario()"   form="form" >Enviar</button>
+        <button type="reset" form="form" onclick="limpaFormulario()">Descartar</button>
         
-        </form>
+    </form>
 
       
         
 
 
-        <div id="lista">
-
-            <!--<div id="item_lista">
-                
-
-            <ul>
-                <li>
-                    <button>Deletar</button>
-                    <button>Editar</button>
-                   <button>Video</button>
-                </li>
-            </ul>
-
-            </div> -->
+        <div id="lista" class="lista">
+            <span></span>
+        <div class="caixaLista"></div>
 
         </div>
 

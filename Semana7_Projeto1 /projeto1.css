@@ -79,7 +79,7 @@ body{
 .options h3{
     padding-top: 0%;
     text-align: center;
-    width: 500px;
+    width: 600px;
     display: block;
     box-shadow: inset;
     background-color: #5f9ea0;
@@ -262,15 +262,15 @@ transition: all 0.3s ease-out;
     width: 20px;
 }
 
-.form{
+#form{
     display: flex;
     flex-direction: column;
     position: relative;
     background-color:	#b0c4de;
-    margin-right: 930px;
+    margin-right: 800px;
     margin-left: 26px;
     margin-bottom: 10px;
-    margin-top: -120px;
+    margin-top: -135px;
     border-radius: 2%;
     padding-left: 20px;
     padding-right: 20px;
@@ -281,6 +281,117 @@ transition: all 0.3s ease-out;
 
 
 }
+
+.input{
+    border-radius: 6px;
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    position: relative;
+    max-width: 500px;
+    background:#b0c4de;
+    box-shadow: 0 5px 10px rgba(0, 0, 0 ,2);
+   
+
+}
+
+.tituloForm{
+    font-size: 20px;
+
+
+}
+
+.input_form{
+    height: -20px;
+    width: 85%;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0 ,2);
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    caret-color: #b0c4de;
+}
+
+.input_Box{
+    Box-shadow: 0 5px 10px rgba(0, 0, 0 ,2);
+    height: 10%;
+    width: 93%;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 25px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    caret-color: #b0c4de;
+
+}
+
+
+
+.caracteres{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    right: 45px;
+    color: black;
+    font-size: 15px;
+  
+}
+
+.caracteres2{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    right: 45px;
+    color: black;
+    font-size: 15px;
+  
+}
+
+.caracteresDescricao{
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+    right: 45px;
+    color: black;
+    font-size: 15px;
+  
+}
+
+
+
+
+.busca{
+    margin-left: 5%;
+}
+
+.lista{
+    display: flexbox;
+    background-color:#f8f8ff;
+    position: relative;
+    margin-left: 45%;
+    margin-bottom: 40%;
+    margin-top: -48%;
+    max-width: 650px;
+    height: 200px;
+    border-radius: 6px;
+    Box-shadow: 0 5px 10px rgba(0, 0, 0 ,2);
+    padding-bottom: 10px ;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+
+}
+
+#item_lista{
+    font-size: 20px;
+    
+    
+}
+
+
+
 
 
 

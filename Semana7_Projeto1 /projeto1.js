@@ -283,7 +283,12 @@ function salvarFormulario () {
         }
     }
 
-    limpaFormulario();
+    // limpaFormulario();
+    contadorTotal();
+    contadorFront();
+    contadorBack();
+    contadorFull();
+    contadorSkills();
 
 }
 
@@ -322,11 +327,11 @@ limpaFormulario = function() {
 }
 
 adicionaFormularioNaLista = function(dados) {
-    var html = "<div id='item_lista_"+dados.identificador+"'><div>"+dados.titulo+
-               "</div><div>"+dados.linguagem+"</div><div>"+dados.categoria+
-               "</div><div>"+dados.descricao+"</div><div>"+dados.url+"</div></div>"+
+    var html = "<div  id='item_lista_"+ "<br/>" +dados.identificador+ "<br/>" + "'><div>"+dados.titulo+
+               "</div><div>"+ "<br/>" +dados.linguagem+"</div><div>"+ "<br/>" +dados.categoria+
+               "</div><div>"+ "<br/>" +dados.descricao+"</div><div>"+ "<br/>" +dados.url+"</div></div>"+
                "<div id='item_botoes_"+dados.identificador+"'></div>";
-    var botoes = "<div><button onclick='deletarItem("+dados.identificador+")'>Deletar"+
+    var botoes = "<div> <br/> <button onclick='deletarItem("+dados.identificador+")'>Deletar"+
                "</button><button onclick='editarItem("+dados.identificador+")'>Editar"+
                "</button><a href='"+dados.url+"' target='_blank'>Video</a></div>";
     document.getElementById('lista').innerHTML += html;
@@ -348,9 +353,8 @@ deletarItem = function(identificador) {
             alert("Seu card foi deletado!")
         }
     }
-} else {
-    return
-}
+} 
+
 
 }
 
@@ -385,4 +389,82 @@ atualizaFormularioNaLista = function(dados) {
     adicionaFormularioNaLista(dados);
 }
 
+function contadorTotal () {
+    var count = 0 ;
+    var dadosFormulario = JSON.parse(localStorage.getItem("dadosFormulario"));
+    if(dadosFormulario != null){
+        for(dados of dadosFormulario){
+            if(dados != null && dados != " "){
+                count++;
+            }
+            
+           }
+        document.getElementById("cards_total").innerHTML = count; 
+    }
+}
 
+function contadorFront () {
+   var count = 0 ;
+   var dadosFormulario = JSON.parse(localStorage.getItem("dadosFormulario"));
+    if(dadosFormulario != null){
+
+   for(dados of dadosFormulario){
+    if(dados!= null && dados.categoria == "Front-End"){
+        count++;
+    }
+    
+   }
+}
+   document.getElementById("cards_Front").innerHTML = count;
+}
+
+function contadorBack () {
+    var count = 0 ;
+    var dadosFormulario = JSON.parse(localStorage.getItem("dadosFormulario"));
+    if(dadosFormulario != null){
+    for(dados of dadosFormulario){
+     if(dados!= null && dados.categoria == "BackEnd"){
+         count++;
+     }
+     
+    }
+}
+    document.getElementById("cards_Back").innerHTML = count;
+ }
+
+ function contadorFull () {
+    var count = 0 ;
+    var dadosFormulario = JSON.parse(localStorage.getItem("dadosFormulario"));
+    if(dadosFormulario != null){
+    for(dados of dadosFormulario){
+     if(dados!= null && dados.categoria == "FullStack"){
+         count++;
+     }
+     
+    }
+}
+    document.getElementById("cards_Full").innerHTML = count;
+ }
+
+ function contadorSkills () {
+    var count = 0 ;
+    var dadosFormulario = JSON.parse(localStorage.getItem("dadosFormulario"));
+    if(dadosFormulario != null){
+    for(dados of dadosFormulario){
+     if(dados!= null && dados.categoria == "Comportamental/Soft"){
+         count++;
+     }
+     
+    }
+}
+    document.getElementById("cards_Skills").innerHTML = count;
+ }
+
+ contadorTotal();
+    contadorFront();
+    contadorBack();
+    contadorFull();
+    contadorSkills();
+
+
+    // Barra de pesquisa
