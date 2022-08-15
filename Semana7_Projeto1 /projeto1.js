@@ -460,11 +460,19 @@ function contadorBack () {
     document.getElementById("cards_Skills").innerHTML = count;
  }
 
- contadorTotal();
-    contadorFront();
-    contadorBack();
-    contadorFull();
-    contadorSkills();
+contadorTotal();
+contadorFront();
+contadorBack();
+contadorFull();
+contadorSkills();
 
 
     // Barra de pesquisa
+
+    //Não consegui fazer a barra de pesquisa
+
+        function searchCards () {
+            
+        }
+
+
